@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/optionsLL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:layout_gravity="center"
+    android:visibility="gone"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/distanceTimeTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/distance_time"
+        android:textAllCaps="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:padding="@dimen/list_row_padding"
+        android:visibility="gone"
+        android:textStyle="bold"/>
+
+
+    <com.jaychang.srv.SimpleRecyclerView
+        android:id="@+id/optionsRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srv_layoutMode="linearHorizontal"
+        app:srv_showDivider="true"
+        app:srv_dividerOrientation="vertical"
+        app:srv_showLastDivider="false"
+        app:srv_dividerPaddingTop="56dp"
+        app:srv_dividerPaddingBottom="@dimen/activity_vertical_margin"
+        app:srv_snap_alignment="center"
+        app:srv_snappy="true"
+        app:srv_horizontalSpacing="@dimen/list_row_padding"
+        app:srv_emptyStateView="@layout/view_empty_options_simple_recycler_view"
+        app:srv_showEmptyStateView="true"/>
+
+    <Button
+        android:id="@+id/confirmBtn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:text="@string/confirm"
+        android:enabled="false"/>
+
+</LinearLayout>
+

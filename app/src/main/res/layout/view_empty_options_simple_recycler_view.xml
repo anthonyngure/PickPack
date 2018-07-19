@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:minWidth="320dp"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <LinearLayout
+        android:id="@+id/loadingLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:indicatorColor="?attr/colorAccent"
+            app:indicatorName="BallPulseIndicator"/>
+
+        <TextView
+            android:id="@+id/loadingTV"
+            style="@style/BaseApp.Body"
+            android:layout_width="wrap_content"
+            android:text="@string/message_waiting"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/errorLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_info_black_24dp"
+            android:tint="?attr/colorAccent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+
+        <TextView
+            style="@style/BaseApp.Body"
+            android:layout_width="300dp"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:gravity="center"
+            android:text="@string/error_unable_to_reach_server"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

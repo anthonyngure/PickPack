@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'Movers'
+            keyPassword 'movers123'
+            storeFile file('E:/RealHustle/Movers/keystore2.jks')
+            storePassword 'movers123'
+        }
+    }
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        multiDexEnabled false
+        applicationId "ke.co.thinksynergy.movers"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    dexOptions {
+        jumboMode true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        pickFirst 'org/joda/time/format/messages_en.properties'
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+    implementation "com.android.support:design:$supportLibVersion"
+    implementation "com.android.support:cardview-v7:$supportLibVersion"
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    implementation 'com.google.android.gms:play-services-places:11.8.0'
+    implementation 'com.google.android.gms:play-services-location:11.8.0'
+    implementation 'com.google.android.gms:play-services-gcm:11.8.0'
+
+    implementation 'com.github.anthonyngure.AndroidBaseCode:basecode:-SNAPSHOT'
+    implementation 'com.github.anthonyngure.AndroidBaseCode:views:-SNAPSHOT'
+    implementation 'com.github.anthonyngure.AndroidBaseCode:logging:-SNAPSHOT'
+    //implementation 'com.github.anthonyngure.AndroidBaseCode:dataloading:-SNAPSHOT'
+    //implementation 'com.github.anthonyngure.AndroidBaseCode:camera:-SNAPSHOT'
+    //implementation 'com.github.anthonyngure.AndroidBaseCode:chipcloud:-SNAPSHOT'
+    //implementation 'com.github.anthonyngure.AndroidBaseCode:compressor:-SNAPSHOT'
+    //implementation 'com.github.anthonyngure.AndroidBaseCode:editor:-SNAPSHOT'
+    //implementation 'com.github.anthonyngure.AndroidBaseCode:filters:-SNAPSHOT'
+    implementation 'com.github.anthonyngure.AndroidBaseCode:showcase:-SNAPSHOT'
+
+    implementation ('com.github.jaychang0917:SimpleRecyclerView:1.2.3'){
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation 'org.greenrobot:greendao:3.2.2'
+    implementation ('com.wang.avi:library:2.1.3'){
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+    implementation 'com.loopj.android:android-async-http:1.4.9'
+    implementation 'com.google.code.gson:gson:2.8.1'
+    implementation ('com.jakewharton:butterknife:8.5.1'){
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+    implementation ('com.jaeger.statusbarutil:library:1.4.0'){
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+    implementation ('com.birbit:android-priority-jobqueue:2.0.1'){
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+    implementation('com.synnapps:carouselview:0.1.4') {
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+
+
+    implementation('com.github.stfalcon:smsverifycatcher:0.3.1') {
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+
+    implementation('com.facebook.android:facebook-android-sdk:4.25.0') {
+        exclude group: 'com.android.support'
+    }
+
+    //https://github.com/natario1/Autocomplete
+    implementation('com.otaliastudios:autocomplete:1.0.2') {
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+
+    //https://github.com/mikepenz/MaterialDrawer
+    implementation("com.mikepenz:materialdrawer:6.0.2@aar") {
+        transitive = true
+        exclude group: 'com.android.support'
+    }
+
+    implementation('com.rengwuxian.materialedittext:library:2.1.4') {
+        exclude group: 'com.android.support'
+    }
+}
+
+greendao {
+    schemaVersion 4
+}
+apply plugin: 'com.google.gms.google-services'
+
+configurations.all {
+    // Check for updates every build
+    // resolutionStrategy.cacheChangingModulesFor 86400, 'seconds'
+    // resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}

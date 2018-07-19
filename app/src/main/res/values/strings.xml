@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">PickPack</string>
+
+    <string name="facebook_app_id">753469594850345</string>
+    <string name="fb_login_protocol_scheme">fb753469594850345</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="continue_as">Continue as %1$s</string>
+    <string name="pref_pending_phone_verification">pending_phone_verification</string>
+    <string name="pref_update_device_token">update_device_token</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="pref_verification_code">verification_code</string>
+    <string name="pref_phone">phone</string>
+    <string name="message_sms_permissions_denied">SMS permissions denied</string>
+    <string name="deny">Deny</string>
+    <string name="allow">Allow</string>
+    <string name="message_permission_receive_sms">Allow Discover App permission to receive SMS so that the app can automatically detect verification code SMS</string>
+    <string name="moving_to">Moving to?</string>
+    <string name="title_activity_destination_picker">DestinationPickerActivity</string>
+    <string name="distance_time">%1$s, %2$s</string>
+    <string name="speak_now">Speak now</string>
+    <string name="moving_from">Moving from</string>
+    <string name="ask_for_transport">Ask For Transport</string>
+    <string name="title_activity_sign_in">Sign In</string>
+    <string name="pick_up">Pick up</string>
+    <string name="small_truck">Small truck</string>
+    <string name="medium_truck">Medium truck</string>
+    <string name="big_truck">Big truck</string>
+    <string name="trailer_20ft">Trailer(20ft)</string>
+    <string name="trailer_40ft">Trailer(40ft)</string>
+    <string name="use_facebook">Use Facebook</string>
+    <string name="sign_in_with_facebook">Sign In With Facebook</string>
+    <string name="sign_in_with_phone_number">Sign In with phone number</string>
+    <string name="error_phone_number">Enter a valid phone number</string>
+    <string name="motor_bike">Motor bike</string>
+    <string name="pref_last_used_origin_location_name">last_used_origin_location_name</string>
+    <string name="request">Request %1$s</string>
+    <string name="transport_with">Transport with ?</string>
+    <string name="powered_by_google">powered by Google</string>
+    <string name="confirm_driver_option">Confirm %1$s</string>
+    <string name="pref_facebook_user">facebook_user</string>
+    <string name="pref_user">user</string>
+    <string name="phone_mask">0712345678</string>
+    <string name="error_field_is_required">This field is required!</string>
+    <string name="error_phone">Please use a valid phone number!</string>
+    <string name="BottomSheetBehaviorGoogleMapsLike">ke.co.thinksynergy.movers.behaviours.BottomSheetBehaviorGoogleMapsLike</string>
+    <string name="continue_">Continue</string>
+    <string name="hint_phone">Your mobile number</string>
+    <string name="phone_code">+254</string>
+    <string name="phone">phone</string>
+    <string name="helper_phone">You will be sent a verification code</string>
+    <string name="pref_email">email</string>
+    <string name="pref_sms_sent">sms_sent</string>
+    <string name="guide_enter_verification_code">Enter the 4-digit code sent to your mobile number </string>
+    <string name="hint_code">Code</string>
+    <string name="helper_code">4-digit code</string>
+    <string name="code_mask">0000</string>
+    <string name="title_activity_phone_verification">Phone Verification</string>
+    <string name="resend_code">Resend code</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="add_your_name">Add your name</string>
+    <string name="confirm">Confirm</string>
+    <string name="error_unable_to_reach_server">Unable to reach the server, please check your network connection and tap to retry.</string>
+    <string name="title_activity_confirm_pick_up">Confirm Pick Up</string>
+    <string name="confirm_pickup">Confirm pickup</string>
+    <string name="confirm_your_pickup">Confirm your pickup</string>
+    <string name="move_pin_to_adjust_pickup_location">Move pin to adjust pickup location</string>
+    <string name="title_activity_test">Test</string>
+    <string name="confirm_new_cost">Confirm new cost</string>
+    <string name="accept_new_cost_estimate">Accept new cost estimate</string>
+    <string name="confirming_new_pick_up_location">Confirming New Pickup Location</string>
+    <string name="connecting_you_to_a_nearby_motorbike">Connecting you to a nearby motorbike</string>
+    <string name="updating_cost_estimate">Updating cost estimate…</string>
+    <string name="new_estimated_cost">New Estimated Cost</string>
+    <string name="finding_directions">Finding directions…</string>
+    <string name="cost_estimate_warning">Cost may vary due to traffic, weather or other factors. Estimate does not include discounts.</string>
+    <string name="estimated_cost">Estimated Cost</string>
+    <string name="your_location">Your location</string>
+
+
+</resources>

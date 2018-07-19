@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ke.co.thinksynergy.movers.activity.PhoneVerificationActivity">
+
+    <include layout="@layout/layout_appbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <ke.co.toshngure.views.FakeShadowView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fake_shadow" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:id="@+id/codeGuideTV"
+                    style="@style/BaseApp.Body"
+                    android:text="@string/guide_enter_verification_code"
+                    android:textSize="18sp"/>
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/codeMET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:textSize="32sp"
+                    android:layout_gravity="center_horizontal"
+                    app:met_floatingLabelText="@string/hint_code"
+                    app:met_floatingLabel="highlight"
+                    app:met_helperText="@string/helper_code"
+                    app:met_helperTextAlwaysShown="true"
+                    android:hint="@string/code_mask"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+
+                <TextView
+                    android:id="@+id/resendTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone"
+                    android:visibility="gone"/>
+
+                <ProgressBar
+                    android:id="@+id/resendPB"
+                    style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:max="100"
+                    android:progress="0" />
+                <Button
+                    android:id="@+id/resendBtn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:enabled="false"
+                    android:text="@string/resend_code" />
+
+
+            </LinearLayout>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="@dimen/fab_margin"
+                android:tint="@android:color/white"
+                android:src="@drawable/ic_arrow_forward_black_24dp"/>
+        </FrameLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

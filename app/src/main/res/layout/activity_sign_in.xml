@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="ke.co.thinksynergy.movers.activity.SignInActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:autoPlay="true"
+                app:fillColor="?attr/colorAccent"
+                app:indicatorGravity="bottom|left|start"
+                app:indicatorMarginVertical="@dimen/list_row_padding"
+                app:indicatorOrientation="horizontal"
+                app:indicatorVisibility="visible"
+                app:pageColor="@android:color/transparent"
+                app:radius="5dp"
+                app:slideInterval="3000"
+                app:snap="true"
+                app:strokeColor="@android:color/white"
+                app:strokeWidth="1.5dp" />
+
+            <TextView
+                android:id="@+id/slideTV"
+                style="@style/BaseApp.Body"
+                android:padding="@dimen/activity_vertical_margin"
+                android:text="@string/ask_for_transport" />
+
+            <ke.co.toshngure.views.FakeShadowView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/fake_shadow" />
+
+            <TextView
+                android:id="@+id/signInTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_vertical_margin"
+                android:text="@string/sign_in_with_phone_number"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_code"
+                    android:layout_marginRight="@dimen/activity_vertical_margin"
+                    android:textSize="32sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_marginEnd="@dimen/activity_vertical_margin" />
+
+                <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/phoneMET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="32sp"
+                    app:met_floatingLabelText="@string/hint_phone"
+                    app:met_floatingLabel="highlight"
+                    app:met_helperText="@string/helper_phone"
+                    app:met_helperTextAlwaysShown="true"
+                    android:hint="@string/phone_mask"/>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/continueBtn"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_vertical_margin"
+                android:text="@string/continue_" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:id="@+id/facebookLogoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_sign_out_black_24dp"
+            android:layout_marginLeft="@dimen/list_row_padding"
+            android:layout_marginRight="@dimen/list_row_padding"
+            android:padding="@dimen/activity_vertical_margin"
+            android:tint="@android:color/white"
+            android:visibility="gone"
+            android:background="@drawable/sign_in_with_facebook_background" />
+
+        <TextView
+            android:id="@+id/facebookLoginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@id/facebookLogoutBtn"
+            android:layout_toLeftOf="@id/facebookLogoutBtn"
+            android:background="@drawable/sign_in_with_facebook_background"
+            android:gravity="center"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingEnd="@dimen/activity_vertical_margin"
+            android:paddingStart="@dimen/activity_vertical_margin"
+            android:text="@string/sign_in_with_facebook"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:drawableLeft="@drawable/com_facebook_button_icon"
+            android:drawableStart="@drawable/com_facebook_button_icon"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    </RelativeLayout>
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
